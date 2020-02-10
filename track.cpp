@@ -60,7 +60,7 @@ extern "C" {
 #undef  restrict    // Harmless; don't restrict memory access.
 #define restrict
 #undef  _Atomic     // Atomics are only included in headers, but never actually used in our code.
-#define _Atomic
+#define _Atomic(X) X
 // XXX Horrible Hack: There are variables named 'new' and 'class' inside! XXX
 #define new         extern_new
 #define class       extern_class
