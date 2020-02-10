@@ -79,7 +79,7 @@ namespace {
 #ifdef _WIN32
 		_isatty(STDIN_FILENO), _isatty(STDOUT_FILENO), _isatty(STDERR_FILENO), _isatty(STDERR_FILENO)
 #else
-		 isatty(STDIN_FILENO),  isatty(STDOUT_FILENO),  isatty(STDERR_FILENO),  isatty(STDERR_FILENO)
+		 (bool) isatty(STDIN_FILENO),  (bool) isatty(STDOUT_FILENO),  (bool) isatty(STDERR_FILENO),  (bool) isatty(STDERR_FILENO)
 #endif
 	};
 
